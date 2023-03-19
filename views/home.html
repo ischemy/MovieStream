@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"
+          ><img src="/style/image/Logo.png" alt="Logo"
+        /></a>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-light" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+        </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link main-font active"
+                aria-current="page"
+                href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link main-font" href="watchlist.html">Watchlist</a>
+            </li>
+            <li class="nav-item">
+              <div
+                class="modal fade"
+                id="exampleModalToggle"
+                aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+                        Login
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                          <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          Login
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <p>Belum Punya Akun?</p>
+                      <button
+                        class="btn btn-primary"
+                        data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal"
+                      >
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="modal fade"
+                id="exampleModalToggle2"
+                aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel2"
+                tabindex="-1"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1
+                        class="modal-title fs-5"
+                        id="exampleModalToggleLabel2"
+                      >
+                        Register
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                          <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Re-Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <p>Sudah Punya Akun ?</p>
+                      <button
+                        class="btn btn-primary"
+                        data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal"
+                      >
+                        Back to Login
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-12 mb-5">
+          <h1
+            class="main-font text-white"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Marvel Movies
+          </h1>
+          <div class="row">
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Avenger infinity war.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    Avengers : Infinity War
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Deadpool.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">Deadpool</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Captain marvel.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">Captain Marvel</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Avengers Endgame.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    Avengers : End Game
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-5">
+          <h1
+            class="main-font text-white"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
+            Romantic Movies
+          </h1>
+          <div class="row">
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/me before you.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">Me Before You</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="450"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/if i stay.webp"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">If I Stay</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/the fault in our stars.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    The Fault In Our Stars
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="550"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/La la land.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">La La Land</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h1
+            class="main-font text-white"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            Japanese Movies
+          </h1>
+          <div class="row">
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="650"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/high and low the worst x cross.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    High And Low The Worst X Cross
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="700"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Crows Zero 2.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">Crows Zero 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="750"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/high and low the worst.jpg"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    High And Low The Worst
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                type="button"
+                class="card bg-transparent border-transparent"
+                style="width: 18rem"
+                data-aos="fade-up"
+                data-aos-delay="800"
+                data-bs-toggle="modal"
+                data-bs-target="#moviemodal"
+              >
+                <img
+                  src="/style/image/Tokyo Revenger.webp"
+                  class="card-img-top"
+                  alt="Thumbnail1"
+                />
+
+                <div class="card-body">
+                  <p class="main-font text-white text-center">
+                    Tokyo Revenger Live Action
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal movie -->
+        </div>
+      </div>
+      <div
+        type="button"
+        class="modal fade"
+        id="moviemodal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="moviemodalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="moviemodalLabel">
+                Avengers : infinity war
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div
+                class="alert alert-success alert-dismissible fade show"
+                role="alert"
+              >
+                <strong>Success!!!</strong> adding movie to watchlist
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <img
+                src="/style/image/Avenger infinity war.jpg"
+                width="465px"
+                height="300px"
+                alt=""
+              />
+              <h3 class="text-center">Synopsis</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Pariatur, quisquam hic non error tempora, aspernatur molestiae
+                vel sed debitis quas tenetur expedita quia odio suscipit optio
+                adipisci nemo recusandae ab? Quo, repellat ipsum aut ducimus
+                perspiciatis consectetur natus eligendi pariatur culpa ab modi
+                ut aspernatur nulla quos adipisci eaque fugiat rem dolorum
+                praesentium vitae unde, et commodi optio accusamus! Nam? Nam
+                illo ipsam adipisci, nobis reprehenderit officiis, dolor aperiam
+                alias sequi ea perspiciatis tenetur iure facere reiciendis
+                necessitatibus vel? Asperiores nihil perferendis commodi
+                delectus excepturi incidunt laudantium veniam eaque qui?
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a href="detail.html">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Play
+                </button>
+              </a>
+
+              <button type="button" class="btn btn-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-bookmark-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"
+                  />
+                </svg>
+                WatchList
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer
+      id="sticky-footer"
+      class="flex-shrink-0 py-4 container text-white-50 bg-transparent"
+    >
+      <hr class="solid" />
+      <div class="row">
+        <div class="col-12">
+          <div class="col-6">
+            <div
+              class="modal fade"
+              id="CuModal"
+              aria-hidden="true"
+              aria-labelledby="CuModalLabel"
+              tabindex="-1"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="CuModalLabel">
+                      Contact Us
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="CuName" class="form-label text-dark"
+                          >Name</label
+                        >
+                        <input type="text" class="form-control" id="CuName" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="CuEmail" class="form-label text-dark"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="CuEmail"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                      <label for="feedbackarea" class="text-dark"
+                        >Feedback</label
+                      >
+                      <br />
+                      <textarea
+                        name="feedbackarea"
+                        id="feedbackarea"
+                        cols="48"
+                        rows="10"
+                      >
+                      </textarea>
+                      <br />
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              href="#CuModal"
+              role="button"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <small>Copyright &copy; MovieStream</small>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+  
+  </body>
+</html>
